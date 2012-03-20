@@ -4,4 +4,75 @@ body {
 
 header {
     font-family: 'Unkempt', cursive;
+    width: 900px;
+    margin: 0px auto;
+}
+
+.main{
+    width: 900px;
+    margin: 0px auto;
+}
+
+#menu {
+    list-style-type: none;
+    display: block;
+    position: relative;
+}
+
+#menu li{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    padding: 0px;
+    margin: 0px;
+    border: 2px solid #999999;
+    text-align:center;
+    font-weight: bold;
+    font-size: large;
+}
+
+#menu li:hover {
+    background-color: #555555;
+    color: #FF9B43;        
+    background-image: none;
+}
+
+#menu .m_sel {
+    background-image: url('imgs/minu.png');
+    background-repeat: no-repeat;
+}
+
+#menu .m_unsel {
+    background-image: url('imgs/plus.png');
+    background-repeat: no-repeat;
+}
+
+#menu01 {
+    top: 30px; left:0px;
+}
+
+#menu02 {
+    top: 30px; left:25px;
+}
+
+#menu03 {
+    top: 30px; left:50px;
+}
+
+#menu04 {
+    top: 30px; left:875px;
+}
+
+#menu05 {
+    top: 30px; left:850px;
+}
+
+.main .b_hide{
+    display: none;
+}
+
+.main .b_show{
+    width: 750px; height: 450px;
+    margin: 40px auto;
+    border: 1px dashed grey;
 }
