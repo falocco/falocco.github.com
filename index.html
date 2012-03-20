@@ -24,7 +24,83 @@
       <h1>Serena Falocco</h1>
     </header>
     <div class="main">
-        Serena Falocco Web Page!
+      <ul id="menu">
+        <li id="menu01" onclick="changePath(1)"></li>
+        <li id="menu02" onclick="changePath(2)"></li>
+        <li id="menu03" onclick="changePath(3)"></li>
+        <li id="menu04" onclick="changePath(4)"></li>
+        <li id="menu05" onclick="changePath(5)"></li>
+      </ul>
+      Serena Falocco Web Page!
+      <div id="block01">
+        <p>Paragraph of block 01</p>
+        <p>The word “cascade” in the classifier name means that the resultant
+        classifier consists of several simpler classifiers ( stages ) that are
+        applied subsequently to a region of interest until at some stage the
+        candidate is rejected or all the stages are passed. The word “boosted”
+        means that the classifiers at every stage of the cascade are complex
+        themselves and they are built out of basic classifiers using one of four
+        different boosting techniques (weighted voting). Currently Discrete
+        Adaboost, Real Adaboost, Gentle Adaboost and Logitboost are
+        supported. The basic classifiers are decision-tree classifiers with at
+        least 2 leaves. Haar-like features are the input to the basic
+        classifers, and are calculated as described below.</p>
+      </div>
+      <div id="block02">
+        <h3>Paragraph of block 02</h3>
+        <p>There is a lot of frameworks and different api, and all of them
+        require lot of learning and code writing to describe what you really
+        want to do. Despite of incredible flexibility, this approach is very
+        annoying. Most of use cases reduce to several standard variations, for
+        which there is no examples at all. Let's look at electronic engineering
+        - it have simple parts, like transistors, ICs, microcontrollers, and
+        circuit was done by hands. But look for state of art in this field - it
+        is model oriented design. Engineer describe process to perform in
+        diagrams and software generate code to run on microprocessor. With this
+        approach it is easy to make changes, maintain and test things. Why not
+        use this in general programming? So, today frozen can look silly - most
+        of modules repeat coreutils and common tools. But tomorrow you could
+        look at big flat screen with huge block diagram which in realtime show
+        load to every computer in your cluster and you could change any
+        parameter on fly, add some more workers and so on.</p>
+      </div>
+      <div id="block03">
+        <h2>Paragraph of block 03</h2>
+        <p>
+          <a href="http://www.google.it">link 01</a>
+          <a href="http://www.google.it">link 02</a>
+          <a href="http://www.google.it">link 03</a>
+          <a href="http://www.google.it">link 04</a>
+          <a href="http://www.google.it">link 05</a>
+          <a href="http://www.google.it">link 06</a>
+        </p>
+      </div>
+      <div id="block04">
+        <p>Paragraph of block 04</p>
+        <ul>
+          <li><a href="http://www.google.it">link 01</a></li>
+          <li><a href="http://www.google.it">link 02</a></li>
+          <li><a href="http://www.google.it">link 03</a></li>
+          <li><a href="http://www.google.it">link 04</a></li>
+          <li><a href="http://www.google.it">link 05</a></li>
+          <li><a href="http://www.google.it">link 06</a></li>
+        </ul>
+      </div>
+      <div id="block05">
+        <p>Paragraph of block 05</p>
+      </div>
     </div>
+<script type="text/javascript">
+    function changePath(vis){
+        var i = 1;
+        for(i=1;i<6;i++){
+            document.getElementById("menu0"+i).className = "m_unsel";
+            document.getElementById("block0"+i).className = "b_hide";
+        }
+        document.getElementById("menu0"+vis).className = "m_sel";
+        document.getElementById("block0"+vis).className = "b_show";
+    }
+    changePath(1);
+</script>
 </body>
 </html>
