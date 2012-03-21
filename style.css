@@ -33,7 +33,7 @@ header {
 
 #menu li:hover {
     background-color: #555555;
-    color: #FF9B43;        
+    color: #FF9B43;
     background-image: none;
 }
 
@@ -72,7 +72,26 @@ header {
 }
 
 .main .b_show{
-    width: 750px; height: 450px;
+    width: 730px; min-height: 430px;
     margin: 40px auto;
+    padding: 10px;
     border: 1px dashed grey;
+}
+
+.i_right{
+    float: right;
+    max-width: 300px;
+    margin-left: 10px;
+}
+
+.i_left{
+    float: left;
+    max-width: 300px;
+    margin-right: 10px;
+}
+
+.i_center{
+    display: block;
+    max-width: 300px;
+    margin: 0px auto;
 }
