@@ -25,11 +25,11 @@
     </header>
     <div class="main">
       <ul id="menu">
-        <li id="menu01" onclick="changePath(1)"></li>
-        <li id="menu02" onclick="changePath(2)"></li>
-        <li id="menu03" onclick="changePath(3)"></li>
-        <li id="menu04" onclick="changePath(4)"></li>
-        <li id="menu05" onclick="changePath(5)"></li>
+        <li id="menu01" onclick="changePath(this)" />
+        <li id="menu02" onclick="changePath(this)" />
+        <li id="menu03" onclick="changePath(this)" />
+        <li id="menu04" onclick="changePath(this)" />
+        <li id="menu05" onclick="changePath(this)" />
       </ul>
       Serena Falocco Web Page!
       <div id="block01">
@@ -119,15 +119,23 @@
     </div>
 <script type="text/javascript">
     function changePath(vis){
-        var i = 1;
-        for(i=1;i<6;i++){
-            document.getElementById("menu0"+i).className = "m_unsel";
-            document.getElementById("block0"+i).className = "b_hide";
+        var children = document.getElementById("menu").childNodes;
+        for (var i = 0; i < children.length; i++) {
+            var elem = children[i];
+            if( elem.tagName == "LI" ){
+                var block = document.getElementById( elem.id.replace("menu","block") );
+                if( elem == vis ){
+                    elem.className = "m_sel";
+                    block.className = "b_show";
+                }else{
+                    elem.className = "m_unsel";
+                    block.className = "b_hide";
+                }
+            }
         }
-        document.getElementById("menu0"+vis).className = "m_sel";
-        document.getElementById("block0"+vis).className = "b_show";
     }
-    changePath(1);
+
+    changePath(document.getElementById("menu01"));
 </script>
 </body>
 </html>
